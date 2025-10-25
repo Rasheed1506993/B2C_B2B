@@ -1,81 +1,88 @@
-# Transportation and Logistics System Documentation
+# نظام النقل والتوصيل - المخططات الكاملة
 
-## System Architecture Diagrams
+---
 
-### 1. Context Diagram - System Overview
+## 1. مخطط السياق (Context Diagram)
 
 ```mermaid
-graph TB
+flowchart LR
     B2C[العميل المباشر<br/>B2C]
     B2B[الشركات والفنادق<br/>B2B]
     Partners[الموردون/السائقون<br/>Partners]
     Admin[مدير النظام<br/>Admin]
-    TDS[نظام النقل<br/>والتوصيل]
+    System[نظام النقل<br/>والتوصيل]
     External[الجهات الخارجية]
+    
+    B2C -->|تأكيد وفاتورة| System
+    B2C -->|طلب حجز| System
+    
+    System -->|طلب حجز| External
+    External -->|تقارير وفواتير| System
+    External -->|حجز للعملاء| System
+    External -->|إشعارات حجز| System
+    External -->|تسجيل سيارات| System
+    
+    Partners -->|تقارير وإحصائيات| System
+    Partners -->|حجز للعملاء| System
+    Partners -->|إشعارات حجز| System
+    
+    Admin -->|إدارة وإعدادات| System
+    
+    System -->|إشعارات حجز| B2B
+    System -->|تقارير وفواتير| B2B
 
-    B2C -->|تأكيد وفوترة| TDS
-    B2C -->|طلب حجز| TDS
-    
-    External -->|تقارير وفواتير| TDS
-    External -->|حجز للعملاء| TDS
-    External -->|إشعارات حجز| TDS
-    External -->|تسجيل سيارات| TDS
-    
-    Partners -->|تقارير وإحصائيات| TDS
-    Admin -->|إدارة وإعدادات| TDS
-    
-    TDS -->|إشعارات حجز| B2B
-    TDS -->|تقارير وفواتير| B2B
-
-    style TDS fill:#f9f,stroke:#333,stroke-width:4px
+    style System fill:#e8e8e8,stroke:#333,stroke-width:3px
+    style B2C fill:#fff,stroke:#333,stroke-width:2px
+    style B2B fill:#fff,stroke:#333,stroke-width:2px
+    style Partners fill:#fff,stroke:#333,stroke-width:2px
+    style Admin fill:#fff,stroke:#333,stroke-width:2px
+    style External fill:#fff,stroke:#333,stroke-width:2px
 ```
 
-### 2. Technical Architecture
+---
+
+## 2. البنية التقنية (Technical Architecture)
 
 ```mermaid
-graph TB
-    subgraph "External Services خدمات خارجية"
+flowchart TB
+    subgraph "خدمات خارجية"
         GoogleMaps[Google Maps API<br/>الخرائط والمسافات]
         Moyasar[Moyasar/Hyperpay<br/>بوابة الدفع]
         Twilio[Twilio/Unifonic<br/>SMS إرسال]
         WhatsApp[WhatsApp API<br/>رسائل واتساب]
     end
 
-    subgraph "Frontend Applications"
+    subgraph "Frontend"
         ReactControl[لوحة التحكم<br/>React.js]
         ReactNative[تطبيق الجوال<br/>React Native]
         ReactWeb[تطبيق الويب<br/>React.js]
     end
 
-    subgraph "Backend System الخادم"
+    subgraph "Backend الخادم"
         APIServer[API Server<br/>Node.js/Laravel]
         
-        subgraph "Modules"
-            Auth[نظام المصادقة<br/>JWT]
-            Operations[نظام التشغيل]
-            Sales[نظام المبيع]
-            Versions[نظام الإصدارات]
-            Reservations[نظام الحجز]
-        end
+        JWT[نظام المصادقة<br/>JWT]
+        Operations[نظام التشغيل]
+        Sales[نظام المبيع]
+        Versions[نظام الإصدارات]
+        Reservations[نظام الحجز]
         
-        subgraph "Data Layer"
-            MySQL[(MySQL<br/>البيانات الرئيسية)]
-            Redis[(Redis<br/>الكاش)]
-            GoogleM[GoogleM]
-        end
+        MySQL[(MySQL<br/>البيانات الرئيسية)]
+        Redis[(Redis<br/>الكاش)]
+        GoogleM[GoogleM]
     end
 
     ReactControl --> APIServer
     ReactNative --> APIServer
     ReactWeb --> APIServer
 
-    APIServer --> Auth
+    APIServer --> JWT
     APIServer --> Operations
     APIServer --> Sales
     APIServer --> Versions
     APIServer --> Reservations
 
-    Auth --> MySQL
+    JWT --> MySQL
     Operations --> MySQL
     Sales --> MySQL
     Reservations --> MySQL
@@ -88,12 +95,12 @@ graph TB
 
     Reservations --> GoogleM
 
-    style APIServer fill:#bbf,stroke:#333,stroke-width:2px
-    style MySQL fill:#dfd,stroke:#333,stroke-width:2px
-    style Redis fill:#fdd,stroke:#333,stroke-width:2px
+    style APIServer fill:#e8e8e8,stroke:#333,stroke-width:2px
 ```
 
-### 3. Database Schema
+---
+
+## 3. قاعدة البيانات (Database Schema)
 
 ```mermaid
 erDiagram
@@ -256,76 +263,60 @@ erDiagram
         string payment_method
         string moyasar_id
     }
-
-    TRANSACTION {
-        int transaction_id PK
-        string commission_id FK
-        string credit_number
-        boolean processed
-        int payment_status
-        string request_status
-    }
-
-    BOOKING_ITEM {
-        int item_id PK
-        string booking_id FK
-        string car_id FK
-        string service_option
-        int adults_id FK
-        int year_price
-        string period_type
-        boolean is_active
-    }
 ```
 
-### 4. Booking Flow - Sequence Diagram
+---
+
+## 4. مخطط تسلسل الحجز (Booking Sequence)
 
 ```mermaid
 sequenceDiagram
-    participant Employee as موظف
-    participant Client as عميل
-    participant B2B as نظام B2B تجارى
-    participant Reservation as نظام الحجز
-    participant Website as نظام الويب سايت
-    participant Operations as نظام التشغيل
-    participant Driver as سائق
+    participant موظف
+    participant عميل
+    participant B2B as نظام B2B تجاري
+    participant حجز as نظام الحجز
+    participant ويب as نظام الويب سايت
+    participant تشغيل as نظام التشغيل
+    participant سائق
 
-    Employee->>Client: طلب بيانات التنظير
-    Client->>Employee: تسجيل دخول (رقم الهوية)
-    Employee->>Client: مرجعة سابقة أخرى
-    Client->>B2B: حجز جديد
-    B2B->>Reservation: تقديم بيانات الحجز (الأنتر، الرسوم)
-    Reservation->>B2B: تعيير الحجوزة والأسعار للعميل (الشركة)
-    B2B->>Reservation: إختيار الحجوزة وإرسالها (للاعتماد)
-    Reservation->>Website: شحن حد 200 ريال
-    Website->>Reservation: تحويل طريقة عمر الحجز (مذا)
-    Reservation->>Driver: طباعة عمر الحجز
-    Driver->>Reservation: استلام عمر الحجز
+    موظف->>عميل: طلب بيانات التسجيل
+    عميل->>موظف: تسجيل دخول (رقم العميل)
+    موظف->>عميل: مراجعة سابقة (أخرى)
+    عميل->>B2B: حجز جديد
+    B2B->>حجز: تقديم بيانات الحجز (الأسعار، الرسوم)
+    حجز->>B2B: تغيير الحجوزة والأسعار للعميل (الشركة)
+    B2B->>حجز: اختيار الحجوزة وإرسالها (للاعتماد)
+    حجز->>ويب: شحن حد 200 ريال
+    ويب->>حجز: تحويل طريقة عمر الحجز (مدى)
+    حجز->>سائق: طباعة عمر الحجز
+    سائق->>حجز: استلام عمر الحجز
     
     rect rgb(70, 130, 180)
-        Note over B2B,Driver: الربط بذن لعمل البحث
+        Note over B2B,سائق: الرابط بين لعمل البحث
     end
     
-    Reservation->>Operations: تعال الحجز
-    Operations->>Driver: اصدار 200 ريال (توصيل أو تعديل)
+    حجز->>تشغيل: تعادل الحجز
+    تشغيل->>سائق: إصدار 200 ريال (توصيل أو تعديل)
     
     rect rgb(100, 149, 237)
-        Note over Operations: جهة الحجز
+        Note over تشغيل: جهة الحجز
     end
     
-    Operations->>Website: تقديم العام و السرعية
-    Website->>B2B: قدرة الشركة تحكيم 45,800 ريال
-    B2B->>Employee: تعيير تقارير بذاتكها
+    تشغيل->>ويب: تقديم العام و السرعية
+    ويب->>B2B: قدرة الشركة تحكيم 45,800 ريال
+    B2B->>موظف: تغيير تقارير بذاتها
 ```
 
-### 5. Sales Booking Process
+---
+
+## 5. عملية البيع والحجز (Sales Process)
 
 ```mermaid
 flowchart TD
-    Start([بداية - توسل الحجز لطلب الحوار]) --> CheckType{التفاقد المطاف حسب الوقت}
+    Start([بداية - توصل الحجز لطلب الحوار]) --> CheckType{الفاعد المطاف حسب الوقت}
     
-    CheckType -->|أنا مالك الوقت الإرجاعة| WaitQueue[الوضوع في حالة الانتظار]
-    CheckType -->|لم تكن الفوات الإرجاعة في البداء| Build[تلقائرة المطاف حسب المنطقة]
+    CheckType -->|أنا ماللك الوقت الارجاعة| WaitQueue[الوضوع في حالة الانتظار]
+    CheckType -->|لم تكن الفوات الارجاعة في البداء| Build[تلقائية المطاف حسب المنطقة]
     
     WaitQueue --> WaitQueue
     
@@ -333,38 +324,40 @@ flowchart TD
     
     Follow -->|مرتبطة| Track[تتبع الرحلة]
     Follow -->|عربية| Process1[الوضع بشن البعيد]
-    Follow -->|تامنة لاخرى| Complete[انتتهاء بالمجام الشهري<br/>Akfal]
+    Follow -->|تامنة لاخرى| Complete[انتهاء بالمجام الشهري<br/>Akfal]
     
     Track --> LoopCheck{حالة الرحلة}
     LoopCheck -->|جارية| Track
     LoopCheck -->|منتهية| Complete
     
     Process1 --> Complete
-    Complete --> Distribution[توزيع المستحقات تلقائيا<br/>نسبة خصم للتوسيل قسمة عملاء لموردة صافي الدخع]
+    Complete --> Distribution[توزيع المستحقات تلقائيا<br/>نسبة خصم للتوصيل قسمة عمولة لموردة صافي الدخل]
     Distribution --> Send[إرسال الفواتير والتخصيبة<br/>PDF + QR Code]
     Send --> Request[طلب تقييم من العميل]
     Request --> End([النهاية])
 
-    style Complete fill:#6495ED
-    style Distribution fill:#1E90FF
+    style Complete fill:#6495ED,color:#fff
+    style Distribution fill:#1E90FF,color:#fff
 ```
 
-### 6. Route Planning Flowchart
+---
+
+## 6. تخطيط المسارات (Route Planning)
 
 ```mermaid
 flowchart TD
-    Start([بداية - تخطيط جدول طلب عملاء]) --> LoadData[الخوال المرسلة للعمعيل]
+    Start([بداية - تخطيط جدول طلب عملاء]) --> LoadData[الحوال المرسلة للعميل]
     
-    LoadData --> FindStations[تحديد نقاط السنقام<br/>الأطيب والأعقاد<br/>العزل والأقتتصادية للارحز]
+    LoadData --> FindStations[تحديد نقاط السنقام<br/>الاطيب والاعقاد<br/>الغزل والاقتصادية للارجز]
     
     FindStations --> CalcDistances[رفع المسافات الفعلية<br/>وفع المسافة الفعلي في الخارج الفعلي في<br/>المدعيات ضمنها]
     
     CalcDistances --> Branches{رفع مسارات العمرة}
     
     Branches -->|صندوق العربة للحباية| DirectBranch[صندوق العربة للحباية]
-    Branches -->|صندوق وطنية الأخوة| StationBranch[صندوق وطنية الأخوة]
+    Branches -->|صندوق وطنية الاخوة| StationBranch[صندوق وطنية الاخوة]
     
-    DirectBranch --> Merge[رباط معطيات الخرائع<br/>وفوق الطريقة الأفضل لجميع<br/>الموسفيل الخبيد بفن]
+    DirectBranch --> Merge[رباط معطيات الخرائط<br/>وفوق الطريقة الافضل لجميع<br/>الموسفيل الخبيد بفن]
     StationBranch --> Merge
     
     Merge --> SendOrder[رسل تفصيل الطريقة]
@@ -372,49 +365,53 @@ flowchart TD
     SendOrder --> Approval{التشركات موجبحة؟}
     
     Approval -->|نعم| Accept[رفع الطلب]
-    Approval -->|لا| Modify[تحديد سبعة الأخصعرا<br/>والجمت 20]
+    Approval -->|لا| Modify[تحديد سبعة الاخصعرا<br/>والجمت 20]
     
     Accept --> End1([نجح])
     
-    Modify --> RetryNotif[ارسل الإخطار الالكتروني بح عمالية]
-    RetryNotif --> TrackFinal[التوسفة ويعفضل المالصل]
+    Modify --> RetryNotif[ارسل الاخطار الالكتروني بح عمالية]
+    RetryNotif --> TrackFinal[التوصفة ويعفضل المالصل]
     TrackFinal --> NotifyDriver[النشهبر الخدور بيتروقع كتها]
     NotifyDriver --> SendInstructions[تسليل التعريوزات<br/>والتحنيم الخدمويزات]
     SendInstructions --> Final([التنهى - مشواءر العمبل])
-    Final --> BookingConfirm[حجز يعامل جديول الطلب<br/>الأخعورى]
+    Final --> BookingConfirm[حجز يعامل جديول الطلب<br/>الاخعورى]
 
-    style Accept fill:#32CD32
-    style Modify fill:#1E90FF
+    style Accept fill:#32CD32,color:#fff
+    style Modify fill:#1E90FF,color:#fff
 ```
 
-### 7. Trip Search in Database
+---
+
+## 7. البحث عن الرحلة (Trip Search)
 
 ```mermaid
 flowchart TD
-    Start([بداية - وسول للحجز في قاعدة البابة]) --> ReadFilters[التقرد المطافات حسب الريقت]
+    Start([بداية - وصول للحجز في قاعدة البيانة]) --> ReadFilters[التقرد المطافات حسب الريقت]
     
-    ReadFilters -->|أنا مالك وفت الإرجاعة| WaitSide[الوضوع في حالة الانتظار]
-    ReadFilters -->|لم تكن الفوات الإرجاعة في البداء| FilterSide[تلقائرة المطاف حسب المنطقة]
+    ReadFilters -->|انا ماللك وفت الارجاعة| WaitSide[الوضوع في حالة الانتظار]
+    ReadFilters -->|لم تكن الفوات الارجاعة في البداء| FilterSide[تلقائية المطاف حسب المنطقة]
     
     WaitSide --> WaitSide
     
     FilterSide --> ExecutionFollow{متابعة التنفيذ<br/>من مشرف الشباكة}
     
-    ExecutionFollow -->|منتهية| CompleteTrip[انتتهاء بالمجام الشهري<br/>Akfal]
+    ExecutionFollow -->|منتهية| CompleteTrip[انتهاء بالمجام الشهري<br/>Akfal]
     
-    CompleteTrip --> SendDoc[توزيع المستحقات تلقائيا<br/>نسبة خصم للتوسيل قسمة عملاء لموردة صافي الدخع]
+    CompleteTrip --> SendDoc[توزيع المستحقات تلقائيا<br/>نسبة خصم للتوصيل قسمة عمولة لموردة صافي الدخل]
     SendDoc --> QRCode[إرسال الفواتير والتخصيبة<br/>PDF + QR Code]
     QRCode --> FeedbackRequest[طلب تقييم من العميل]
     FeedbackRequest --> End([النهاية])
 
-    style CompleteTrip fill:#4169E1
+    style CompleteTrip fill:#4169E1,color:#fff
 ```
 
-### 8. Route Arrival - Tracking Flow
+---
+
+## 8. تتبع وصول المسار (Route Arrival Tracking)
 
 ```mermaid
 flowchart TD
-    Start([بداية - وسول الحجد الحوا مزية]) --> LoadBooking[ناقذة الحجز<br/>في شاشة الخدمورة المؤكدة]
+    Start([بداية - وصول الحجد الحوا مزية]) --> LoadBooking[ناقذة الحجز<br/>في شاشة الخدمورة المؤكدة]
     
     LoadBooking --> ShowType[تايز عرص التفقيب وفتع الخجز]
     
@@ -426,7 +423,7 @@ flowchart TD
     NearVehicles --> ShowSelection[طوء التقابلي الشخصي<br/>حسب الشاحلة والتكليف والوقت]
     FarVehicles --> ShowSelection
     
-    ShowSelection --> ValidDistance{طوع أى المخخورك<br/>ضمن 15 كنلم}
+    ShowSelection --> ValidDistance{طوع اى المخخورك<br/>ضمن 15 كنلم}
     
     ValidDistance -->|طوع عن الشركة| FarAction[رسالة السادس جداول رحلة<br/>منذالية]
     ValidDistance -->|عديم عن المتفق| NearAction[طوع العما في البذع البعد نفكرر<br/>الجمم ممنوحة حضانة الخلتة]
@@ -434,16 +431,18 @@ flowchart TD
     FarAction --> Notify[تكفيل تكلفت]
     NearAction --> DirectAction[طوع التكلت في القدر بين الطلب]
     
-    DirectAction --> BookConfirmation[رسل نشعيرت<br/>إغلى]
+    DirectAction --> BookConfirmation[رسل نشعيرت<br/>اغلى]
     Notify --> BookConfirmation
     
     BookConfirmation --> SendDetails[رسل نشعيرت التفريق طلب الحلمة]
     SendDetails --> End([رقم])
 
-    style ValidDistance fill:#228B22
+    style ValidDistance fill:#228B22,color:#fff
 ```
 
-### 9. New Booking Arrival
+---
+
+## 9. وصول حجز جديد (New Booking Arrival)
 
 ```mermaid
 flowchart TD
@@ -465,10 +464,12 @@ flowchart TD
     
     SendToScreen --> End2([اكتمل])
 
-    style NotifyRejection fill:#4169E1
+    style NotifyRejection fill:#4169E1,color:#fff
 ```
 
-### 10. Customer Registration Flow
+---
+
+## 10. تسجيل عميل جديد (Customer Registration)
 
 ```mermaid
 flowchart TD
@@ -479,16 +480,16 @@ flowchart TD
     RegMethod -->|ب| Continue[متابعة الخدمة]
     
     Guest --> OTP[إرسال OTP عبر رقم الجوال]
-    CreateAccount --> Verify[تسجيل بيانات المرسلة<br/>الإدخال و التحقق للتحقيق]
+    CreateAccount --> Verify[تسجيل بيانات المرسلة<br/>الادخال و التحقق للتحقيق]
     Continue --> Verify
     
-    OTP --> VerifyData[تحديد تسميع المرسلة<br/>وإدخال الجروح للتحقيق وفتح]
+    OTP --> VerifyData[تحديد تسميع المرسلة<br/>وادخال الجروح للتحقيق وفتح]
     
     VerifyData --> SelectService{اختيار نوع الخدمة}
     Verify --> SelectService
     
     SelectService -->|بوزر عطن| Type1[بوزر عطن]
-    SelectService -->|تيزيد يشاء أو فقر| Type2[تيزيد يشاء أو فقر]
+    SelectService -->|تيزيد يشاء او فقر| Type2[تيزيد يشاء او فقر]
     SelectService -->|مشاعات 5| Type3[مشاعات 5]
     SelectService -->|شدولة 12| Type4[شدولة 12]
     SelectService -->|بوير الحرض| Type5[بوير الحرض]
@@ -506,7 +507,7 @@ flowchart TD
     ConfirmRequest --> ApprovalCheck{موافق على الشروط؟}
     
     ApprovalCheck -->|لا| ModifyBooking[مدجود تروديدا لبرح]
-    ApprovalCheck -->|نعم| PaymentPage[بوابة الدفع الإلكتروني]
+    ApprovalCheck -->|نعم| PaymentPage[بوابة الدفع الالكتروني]
     
     ModifyBooking --> SubmitRequest
     
@@ -514,8 +515,8 @@ flowchart TD
     
     SendConfirmation --> End([نهاية - اكتميل تسجيل لعمان<br/>الحرخو])
 
-    style VerifyData fill:#4169E1
-    style DisplayService fill:#32CD32
+    style VerifyData fill:#4169E1,color:#fff
+    style DisplayService fill:#32CD32,color:#fff
 ```
 
 ---
