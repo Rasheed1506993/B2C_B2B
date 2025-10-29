@@ -1,4 +1,5 @@
-  <h2 style="text-align: center;">  تحليل وتصميم نظام - رحلتي VIP</h2>
+<div dir="rtl">
+<h2 style="text-align: center;">  تحليل وتصميم نظام - رحلتي VIP</h2>
   <hr>
 
 ## 7. المخططات الهيكلية والوظيفية
@@ -3644,3 +3645,4 @@ erDiagram
 
 
 ---
+</div>
