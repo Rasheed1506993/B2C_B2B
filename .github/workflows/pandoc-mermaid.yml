@@ -1,8 +1,9 @@
-name: [translate:Convert Markdown with Mermaid to PDF]
+name: Convert Markdown with Mermaid to PDF
 
 on:
   push:
-    branches: [ main ]  # [translate:أو الفرع الذي تريد تتبع التغييرات عليه]
+    branches:
+      - main  # أو الفرع الذي تريد تتبع التغييرات عليه
 
 jobs:
   convert:
