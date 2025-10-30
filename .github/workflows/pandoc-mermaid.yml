@@ -16,7 +16,7 @@ jobs:
       - name: Run pandoc with mermaid-filter
         uses: net9-oy/pandoc-mermaid-action@main
         with:
-          input-file: "B2C_B2B/Structural_Functional_Diagrams.md"
+          input-file: "Structural_Functional_Diagrams.md"
           output-file: "Structural_Functional_Diagrams.pdf"
 
       - name: Upload PDF artifact
