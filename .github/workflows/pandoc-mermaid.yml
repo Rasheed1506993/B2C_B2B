@@ -1,23 +1,46 @@
-name: Convert Markdown with Mermaid to PDF
+name: Convert Markdown with Mermaid to PDF (runner-based)
 
 on:
   push:
     branches:
-      - main  # أو الفرع الذي تريد تتبع التغييرات عليه
+      - main
 
 jobs:
   convert:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run pandoc with mermaid-filter
-        uses: net9-oy/pandoc-mermaid-action@main
+      - name: Install system packages (pandoc + TeX)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-latex-extra
+
+      - name: Install Node.js (18) and global npm packages
+        uses: actions/setup-node@v4
         with:
-          input-file: "Structural_Functional_Diagrams.md"
-          output-file: "Structural_Functional_Diagrams.pdf"
+          node-version: "18"
+      - name: Install mermaid-cli and mermaid-filter
+        run: |
+          npm install -g @mermaid-js/mermaid-cli @binpar/mermaid-filter
+
+      - name: Create puppeteer config to disable sandbox
+        run: |
+          cat > puppeteer-config.json <<'JSON'
+          {
+            "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+          }
+          JSON
+
+      - name: Run pandoc with mermaid-filter to produce PDF
+        env:
+          # إذا احتاج mmdc/mermaid-cli لاستعمال ملف config مُحدّد عبر متغيّر بيئة، يمكن إضافته هنا
+          # في حال mermaid-filter يستدعي mmdc بدون إمكانية تمرير ملف config، سنعتمد على تثبيت mermaid-cli
+          PUPPETEER_CONFIG_PATH: puppeteer-config.json
+        run: |
+          # نستخدم فلتر mermaid-filter (الذي يعتمد على mmdc المُثبت) أثناء تشغيل pandoc
+          pandoc -s Structural_Functional_Diagrams.md --filter=@binpar/mermaid-filter -o Structural_Functional_Diagrams.pdf --pdf-engine=xelatex
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
