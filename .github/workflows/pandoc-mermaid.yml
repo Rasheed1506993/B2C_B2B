@@ -1,0 +1,36 @@
+name: Convert Markdown with Mermaid to PDF
+
+on:
+  push:
+    branches:
+      - main  # أو الفرع الذي تريد تتبع التغييرات عليه
+    paths:
+      - '**.md'  # ليتم تشغيل العمل فقط عند تعديل ملفات Markdown
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # أو الإصدار المناسب
+
+      - name: Install mermaid-filter globally
+        run: npm install -g mermaid-filter
+
+      - name: Install pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc texlive-xetex
+
+      - name: Convert Markdown to PDF
+        run: pandoc -F mermaid-filter -o output.pdf Structural_Functional_Diagrams.md --pdf-engine=xelatex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Structural_Functional_Diagrams.pdf
+          path: output.pdf
