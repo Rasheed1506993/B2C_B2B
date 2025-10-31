@@ -26,6 +26,19 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc texlive-xetex
 
+      - name: Install Chrome dependencies
+        run: |
+          sudo apt-get install -y \
+            libnss3-dev \
+            libatk-bridge2.0-dev \
+            libdrm-dev \
+            libxkbcommon-dev \
+            libxcomposite-dev \
+            libxdamage-dev \
+            libxrandr-dev \
+            libgbm-dev \
+            libasound2-dev
+
       - name: Convert Markdown with Mermaid diagrams to PDF
         env:
           NODE_OPTIONS: "--no-sandbox"
