@@ -27,6 +27,8 @@ jobs:
           sudo apt-get install -y pandoc texlive-xetex
 
       - name: Convert Markdown with Mermaid diagrams to PDF
+        env:
+          NODE_OPTIONS: "--no-sandbox"
         run: pandoc -F mermaid-filter -o Structural_Functional_Diagrams.pdf Structural_Functional_Diagrams.md --pdf-engine=xelatex
 
       - name: Upload PDF artifact
