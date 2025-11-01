@@ -1,0 +1,133 @@
+<svg viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #333; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #fff; }
+      .label { font-family: Arial, sans-serif; font-size: 11px; fill: #555; }
+      .white-label { font-family: Arial, sans-serif; font-size: 11px; fill: #fff; }
+    </style>
+  </defs>
+  
+  <!-- الخلفية -->
+  <rect width="1200" height="1600" fill="#f5f5f5"/>
+  
+  <!-- الحاوية الرئيسية -->
+  <rect x="50" y="50" width="1100" height="1500" rx="8" fill="#fff" stroke="#ccc" stroke-width="2"/>
+  <text x="600" y="30" class="title" text-anchor="middle">دليل الهوية البصرية - رحلتي VIP</text>
+  
+  <!-- الشعار -->
+  <rect x="70" y="80" width="1060" height="100" rx="6" fill="#FF8C00" stroke="#E67E00" stroke-width="3"/>
+  <text x="600" y="120" style="fill: #fff; font-size: 32px; font-weight: bold;" text-anchor="middle">🚗 رحلتي VIP</text>
+  <text x="600" y="145" class="white-label" text-anchor="middle">الشعار الرسمي للشركة</text>
+  
+  <!-- الألوان الأساسية -->
+  <text x="90" y="210" class="title">نظام الألوان</text>
+  
+  <rect x="70" y="220" width="520" height="80" rx="6" fill="#FF8C00" stroke="#E67E00" stroke-width="2"/>
+  <text x="330" y="255" class="subtitle" text-anchor="middle">اللون الأساسي</text>
+  <text x="330" y="275" class="white-label" text-anchor="middle">#FF8C00</text>
+  <text x="330" y="290" class="white-label" text-anchor="middle">برتقالي ذهبي - للعناصر المهمة والأزرار</text>
+  
+  <rect x="610" y="220" width="520" height="80" rx="6" fill="#333333" stroke="#000000" stroke-width="2"/>
+  <text x="870" y="255" class="subtitle" text-anchor="middle">اللون الثانوي</text>
+  <text x="870" y="275" class="white-label" text-anchor="middle">#333333</text>
+  <text x="870" y="290" class="white-label" text-anchor="middle">رمادي داكن - للنصوص والعناوين</text>
+  
+  <!-- ألوان مساعدة -->
+  <rect x="70" y="320" width="255" height="60" rx="4" fill="#4caf50" stroke="#2e7d32" stroke-width="2"/>
+  <text x="197" y="350" class="white-label" text-anchor="middle">النجاح: #4caf50</text>
+  
+  <rect x="345" y="320" width="255" height="60" rx="4" fill="#f44336" stroke="#c62828" stroke-width="2"/>
+  <text x="472" y="350" class="white-label" text-anchor="middle">الخطأ: #f44336</text>
+  
+  <rect x="620" y="320" width="255" height="60" rx="4" fill="#ff9800" stroke="#e65100" stroke-width="2"/>
+  <text x="747" y="350" class="white-label" text-anchor="middle">التحذير: #ff9800</text>
+  
+  <rect x="895" y="320" width="235" height="60" rx="4" fill="#2196f3" stroke="#1565c0" stroke-width="2"/>
+  <text x="1012" y="350" class="white-label" text-anchor="middle">المعلومات: #2196f3</text>
+  
+  <!-- الخطوط -->
+  <text x="90" y="420" class="title">نظام الخطوط</text>
+  
+  <rect x="70" y="430" width="520" height="70" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="330" y="460" style="font-family: Arial; font-size: 16px; fill: #333;" text-anchor="middle">الخط العربي: Cairo</text>
+  <text x="330" y="485" class="label" text-anchor="middle">من Google Fonts - للنصوص العربية</text>
+  
+  <rect x="610" y="430" width="520" height="70" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="870" y="460" style="font-family: Arial; font-size: 16px; fill: #333;" text-anchor="middle">الخط الإنجليزي: Roboto</text>
+  <text x="870" y="485" class="label" text-anchor="middle">من Google Fonts - للنصوص الإنجليزية</text>
+  
+  <!-- الأيقونات -->
+  <rect x="70" y="520" width="1060" height="70" rx="4" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="600" y="550" style="font-size: 16px; fill: #1976d2; font-weight: bold;" text-anchor="middle">الأيقونات: Material Icons Rounded</text>
+  <text x="600" y="575" style="font-size: 28px;" text-anchor="middle">🚗 📍 ⭐ 💰 👤 📅 🕐 📞</text>
+  
+  <!-- أحجام النصوص -->
+  <text x="90" y="620" class="title">أحجام النصوص</text>
+  
+  <rect x="70" y="630" width="520" height="60" rx="4" fill="#fff8e1" stroke="#ffa000" stroke-width="2"/>
+  <text x="330" y="660" style="font-size: 32px; font-weight: bold; fill: #333;" text-anchor="middle">العناوين الكبرى</text>
+  <text x="330" y="680" class="label" text-anchor="middle">32px Bold</text>
+  
+  <rect x="610" y="630" width="520" height="60" rx="4" fill="#fff8e1" stroke="#ffa000" stroke-width="2"/>
+  <text x="870" y="660" style="font-size: 24px; font-weight: 600; fill: #333;" text-anchor="middle">العناوين الفرعية</text>
+  <text x="870" y="680" class="label" text-anchor="middle">24px Semi-bold</text>
+  
+  <rect x="70" y="710" width="520" height="60" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="330" y="740" style="font-size: 16px; fill: #333;" text-anchor="middle">النصوص الأساسية</text>
+  <text x="330" y="760" class="label" text-anchor="middle">16px Regular</text>
+  
+  <rect x="610" y="710" width="520" height="60" rx="4" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="2"/>
+  <text x="870" y="740" style="font-size: 14px; fill: #666;" text-anchor="middle">النصوص الثانوية</text>
+  <text x="870" y="760" class="label" text-anchor="middle">14px Regular</text>
+  
+  <!-- الأزرار -->
+  <text x="90" y="810" class="title">تصميم الأزرار</text>
+  
+  <rect x="70" y="820" width="520" height="70" rx="8" fill="#FF8C00" stroke="#E67E00" stroke-width="2"/>
+  <text x="330" y="860" style="fill: #fff; font-size: 16px; font-weight: bold;" text-anchor="middle">الأزرار الأساسية</text>
+  
+  <rect x="610" y="820" width="520" height="70" rx="8" fill="#fff" stroke="#9e9e9e" stroke-width="2"/>
+  <text x="870" y="860" style="fill: #333; font-size: 16px; font-weight: bold;" text-anchor="middle">الأزرار الثانوية</text>
+  
+  <!-- البطاقات -->
+  <rect x="70" y="910" width="1060" height="70" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="2" filter="drop-shadow(0 2px 8px rgba(0,0,0,0.1))"/>
+  <text x="600" y="945" style="font-size: 16px; font-weight: bold; fill: #333;" text-anchor="middle">البطاقات: خلفية بيضاء + ظل ناعم + حواف مدورة (8px)</text>
+  
+  <!-- الجداول -->
+  <rect x="70" y="1000" width="1060" height="70" rx="4" fill="#fafafa" stroke="#bdbdbd" stroke-width="2"/>
+  <text x="600" y="1030" style="font-size: 16px; font-weight: bold; fill: #333;" text-anchor="middle">الجداول: صفوف متناوبة (#fff / #fafafa) + ترويسة رمادية</text>
+  
+  <!-- النماذج -->
+  <rect x="70" y="1090" width="1060" height="70" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="600" y="1125" style="font-size: 16px; fill: #666;" text-anchor="middle">حقول النماذج: إطار رفيع #e0e0e0 + تركيز برتقالي #FF8C00</text>
+  
+  <!-- رسائل التنبيه -->
+  <text x="90" y="1190" class="title">رسائل التنبيه</text>
+  
+  <rect x="70" y="1200" width="520" height="70" rx="6" fill="#e8f5e9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="330" y="1230" style="font-size: 14px; fill: #2e7d32;" text-anchor="middle">✓ رسالة نجاح</text>
+  <text x="330" y="1250" class="label" text-anchor="middle">خلفية خضراء فاتحة + أيقونة</text>
+  
+  <rect x="610" y="1200" width="520" height="70" rx="6" fill="#ffebee" stroke="#F44336" stroke-width="2"/>
+  <text x="870" y="1230" style="font-size: 14px; fill: #c62828;" text-anchor="middle">✗ رسالة خطأ</text>
+  <text x="870" y="1250" class="label" text-anchor="middle">خلفية حمراء فاتحة + أيقونة</text>
+  
+  <rect x="70" y="1290" width="520" height="70" rx="6" fill="#fff9c4" stroke="#FFC107" stroke-width="2"/>
+  <text x="330" y="1320" style="font-size: 14px; fill: #f57f17;" text-anchor="middle">⚠ رسالة تحذير</text>
+  <text x="330" y="1340" class="label" text-anchor="middle">خلفية صفراء فاتحة + أيقونة</text>
+  
+  <rect x="610" y="1290" width="520" height="70" rx="6" fill="#e3f2fd" stroke="#2196F3" stroke-width="2"/>
+  <text x="870" y="1320" style="font-size: 14px; fill: #1565c0;" text-anchor="middle">ℹ رسالة معلومات</text>
+  <text x="870" y="1340" class="label" text-anchor="middle">خلفية زرقاء فاتحة + أيقونة</text>
+  
+  <!-- المسافات -->
+  <rect x="70" y="1380" width="1060" height="70" rx="4" fill="#f5f5f5" stroke="#ccc" stroke-width="2"/>
+  <text x="600" y="1410" style="font-size: 16px; font-weight: bold; fill: #333;" text-anchor="middle">المسافات والتباعد</text>
+  <text x="600" y="1435" class="label" text-anchor="middle">نظام 8px: 8px, 16px, 24px, 32px, 40px للوحدات الأساسية</text>
+  
+  <!-- الظلال -->
+  <rect x="70" y="1470" width="1060" height="70" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2" filter="drop-shadow(0 2px 8px rgba(0,0,0,0.1))"/>
+  <text x="600" y="1500" style="font-size: 16px; font-weight: bold; fill: #333;" text-anchor="middle">الظلال</text>
+  <text x="600" y="1525" class="label" text-anchor="middle">ظل ناعم: 0 2px 8px rgba(0,0,0,0.1)</text>
+</svg>

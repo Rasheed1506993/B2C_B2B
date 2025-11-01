@@ -1,0 +1,103 @@
+<svg viewBox="0 0 800 1100" xmlns="http://www.w3.org/2000/svg">
+  <!-- الخلفية الرئيسية -->
+  <rect x="50" y="20" width="700" height="1060" fill="#f5f5f5" stroke="#cccccc" stroke-width="2" rx="10"/>
+  
+  <!-- عنوان الشاشة -->
+  <text x="400" y="50" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">شاشة الدفع</text>
+  
+  <!-- رأس صفحة الدفع -->
+  <rect x="70" y="80" width="660" height="90" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="8"/>
+  <text x="400" y="110" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">💰 إتمام عملية الدفع</text>
+  <rect x="280" y="125" width="240" height="35" fill="#ffecb3" stroke="#ff6f00" stroke-width="2" rx="6"/>
+  <text x="400" y="150" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#e65100">المبلغ: 2,432 ر.س</text>
+  
+  <!-- ملخص الحجز -->
+  <rect x="70" y="190" width="660" height="110" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="8"/>
+  <text x="100" y="215" font-family="Arial" font-size="14" font-weight="bold" fill="#1565c0">📋 ملخص الحجز</text>
+  <text x="100" y="240" font-family="Arial" font-size="11" fill="#0d47a1">رقم الحجز: #BO2024-001</text>
+  <text x="100" y="260" font-family="Arial" font-size="11" fill="#0d47a1">عدد الخدمات: 3 خدمات</text>
+  <text x="100" y="280" font-family="Arial" font-size="11" fill="#0d47a1">التاريخ: 15-17 يناير 2024</text>
+  
+  <!-- عنوان طرق الدفع -->
+  <rect x="70" y="320" width="660" height="55" fill="#fafafa" stroke="#bdbdbd" stroke-width="1" rx="8"/>
+  <text x="100" y="355" font-family="Arial" font-size="15" font-weight="bold" fill="#333">اختر طريقة الدفع</text>
+  
+  <!-- بطاقة الدفع نقداً -->
+  <rect x="70" y="395" width="315" height="90" fill="#ffffff" stroke="#e0e0e0" stroke-width="2" rx="8" class="payment-card"/>
+  <circle cx="110" cy="435" r="20" fill="#4caf50" stroke="#2e7d32" stroke-width="2"/>
+  <text x="110" y="442" font-family="Arial" font-size="16" text-anchor="middle" fill="#fff">💵</text>
+  <text x="150" y="430" font-family="Arial" font-size="13" font-weight="bold" fill="#333">الدفع نقداً</text>
+  <text x="150" y="450" font-family="Arial" font-size="10" fill="#666">الدفع للسائق عند الوصول</text>
+  <circle cx="360" cy="435" r="12" fill="#fff" stroke="#bdbdbd" stroke-width="2"/>
+  
+  <!-- بطاقة مدى/فيزا -->
+  <rect x="415" y="395" width="335" height="90" fill="#ffffff" stroke="#FF8C00" stroke-width="3" rx="8" class="payment-card"/>
+  <circle cx="455" cy="435" r="20" fill="#2196f3" stroke="#1565c0" stroke-width="2"/>
+  <text x="455" y="442" font-family="Arial" font-size="16" text-anchor="middle" fill="#fff">💳</text>
+  <text x="495" y="430" font-family="Arial" font-size="13" font-weight="bold" fill="#333">بطاقة مدى / فيزا</text>
+  <text x="495" y="450" font-family="Arial" font-size="10" fill="#666">الدفع الإلكتروني الآمن</text>
+  <g>
+    <text x="495" y="470" font-family="Arial" font-size="9" fill="#999">MADA VISA MASTERCARD</text>
+  </g>
+  <circle cx="720" cy="435" r="12" fill="#FF8C00" stroke="#E67E00" stroke-width="2"/>
+  <circle cx="720" cy="435" r="5" fill="#fff"/>
+  
+  <!-- بطاقة تحويل بنكي -->
+  <rect x="70" y="505" width="315" height="90" fill="#ffffff" stroke="#e0e0e0" stroke-width="2" rx="8" class="payment-card"/>
+  <circle cx="110" cy="545" r="20" fill="#9c27b0" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="110" y="552" font-family="Arial" font-size="16" text-anchor="middle" fill="#fff">🏦</text>
+  <text x="150" y="540" font-family="Arial" font-size="13" font-weight="bold" fill="#333">تحويل بنكي</text>
+  <text x="150" y="560" font-family="Arial" font-size="10" fill="#666">تحويل مباشر للحساب</text>
+  <circle cx="360" cy="545" r="12" fill="#fff" stroke="#bdbdbd" stroke-width="2"/>
+  
+  <!-- بطاقة دفع آجل -->
+  <rect x="415" y="505" width="335" height="90" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="8" class="payment-card"/>
+  <circle cx="455" cy="545" r="20" fill="#ff9800" stroke="#f57c00" stroke-width="2"/>
+  <text x="455" y="552" font-family="Arial" font-size="16" text-anchor="middle" fill="#fff">📅</text>
+  <text x="495" y="540" font-family="Arial" font-size="13" font-weight="bold" fill="#e65100">دفع آجل</text>
+  <text x="495" y="560" font-family="Arial" font-size="10" fill="#e65100">للشركات المعتمدة فقط</text>
+  <text x="495" y="577" font-family="Arial" font-size="9" fill="#bf360c">⚠️ يتطلب موافقة مسبقة</text>
+  <circle cx="720" cy="545" r="12" fill="#fff" stroke="#bdbdbd" stroke-width="2"/>
+  
+  <!-- تفاصيل الطريقة المختارة -->
+  <rect x="70" y="615" width="660" height="130" fill="#f5f5f5" stroke="#cccccc" stroke-width="1" rx="8"/>
+  <text x="100" y="640" font-family="Arial" font-size="13" font-weight="bold" fill="#333">تفاصيل البطاقة</text>
+  <rect x="90" y="655" width="620" height="30" fill="#ffffff" stroke="#bdbdbd" stroke-width="1" rx="4"/>
+  <text x="105" y="675" font-family="Arial" font-size="11" fill="#999">رقم البطاقة</text>
+  <rect x="90" y="695" width="300" height="30" fill="#ffffff" stroke="#bdbdbd" stroke-width="1" rx="4"/>
+  <text x="105" y="715" font-family="Arial" font-size="11" fill="#999">تاريخ الانتهاء (MM/YY)</text>
+  <rect x="410" y="695" width="300" height="30" fill="#ffffff" stroke="#bdbdbd" stroke-width="1" rx="4"/>
+  <text x="425" y="715" font-family="Arial" font-size="11" fill="#999">CVV</text>
+  
+  <!-- معلومات الأمان -->
+  <rect x="70" y="765" width="660" height="70" fill="#e8f5e9" stroke="#66bb6a" stroke-width="2" rx="8"/>
+  <circle cx="110" cy="795" r="18" fill="#4caf50"/>
+  <text x="110" y="800" font-family="Arial" font-size="14" text-anchor="middle" fill="#fff">🔒</text>
+  <text x="145" y="790" font-family="Arial" font-size="12" font-weight="bold" fill="#2e7d32">اتصال آمن ومشفر</text>
+  <text x="145" y="810" font-family="Arial" font-size="10" fill="#388e3c">جميع معلوماتك محمية بتقنية التشفير SSL</text>
+  
+  <!-- سياسة الإلغاء -->
+  <rect x="70" y="855" width="660" height="55" fill="#fafafa" stroke="#bdbdbd" stroke-width="1" rx="8"/>
+  <text x="100" y="880" font-family="Arial" font-size="11" fill="#666">📜 سياسة الإلغاء:</text>
+  <text x="210" y="880" font-family="Arial" font-size="11" fill="#1976d2" text-decoration="underline">اقرأ شروط الإلغاء والاسترجاع</text>
+  <text x="100" y="900" font-family="Arial" font-size="9" fill="#999">يمكن الإلغاء مجاناً قبل 24 ساعة من موعد الحجز</text>
+  
+  <!-- الأزرار -->
+  <g>
+    <!-- زر تأكيد الدفع -->
+    <rect x="70" y="930" width="450" height="80" fill="#4caf50" stroke="#2e7d32" stroke-width="2" rx="8"/>
+    <text x="295" y="960" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">✓ تأكيد الدفع</text>
+    <text x="295" y="985" font-family="Arial" font-size="12" text-anchor="middle" fill="#e8f5e9">إتمام العملية بأمان</text>
+  </g>
+  
+  <g>
+    <!-- زر العودة -->
+    <rect x="540" y="930" width="210" height="80" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="2" rx="8"/>
+    <text x="645" y="970" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">← الرجوع</text>
+    <text x="645" y="990" font-family="Arial" font-size="10" text-anchor="middle" fill="#666">للسلة</text>
+  </g>
+  
+  <style>
+    .payment-card:hover { cursor: pointer; }
+  </style>
+</svg>

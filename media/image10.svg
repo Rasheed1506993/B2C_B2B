@@ -1,0 +1,105 @@
+<svg viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #333; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 12px; fill: #666; }
+      .label { font-family: Arial, sans-serif; font-size: 14px; fill: #fff; }
+      .section-name { font-family: Arial, sans-serif; font-size: 11px; fill: #999; }
+    </style>
+  </defs>
+  
+  <!-- الخلفية الرئيسية -->
+  <rect width="1200" height="1600" fill="#f5f5f5"/>
+  
+  <!-- الحاوية الرئيسية -->
+  <rect x="50" y="50" width="1100" height="1500" rx="8" fill="#fff" stroke="#ccc" stroke-width="2"/>
+  <text x="600" y="30" class="title" text-anchor="middle">الصفحة الرئيسية للموقع</text>
+  
+  <!-- شريط الملاحة -->
+  <rect x="70" y="70" width="1060" height="70" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="100" y="95" class="section-name">شريط الملاحة</text>
+  <text x="100" y="120" class="subtitle">شعار + روابط + تسجيل دخول</text>
+  
+  <!-- القسم البطل -->
+  <rect x="70" y="160" width="1060" height="350" rx="4" fill="#1a237e" stroke="#0d47a1" stroke-width="2"/>
+  <text x="100" y="185" class="label">القسم البطل</text>
+  <text x="100" y="205" class="label" font-size="10">صورة كبيرة + عنوان + زر CTA</text>
+  
+  <!-- العنوان الرئيسي -->
+  <rect x="350" y="210" width="500" height="80" rx="4" fill="#fff" stroke="#1a237e" stroke-width="2"/>
+  <text x="600" y="240" class="subtitle" text-anchor="middle">العنوان الرئيسي</text>
+  <text x="600" y="260" class="section-name" text-anchor="middle">نص كبير جذاب</text>
+  
+  <!-- العنوان الفرعي -->
+  <rect x="350" y="310" width="500" height="60" rx="4" fill="#e0e0e0" stroke="#1a237e" stroke-width="2"/>
+  <text x="600" y="335" class="subtitle" text-anchor="middle">العنوان الفرعي</text>
+  <text x="600" y="352" class="section-name" text-anchor="middle">وصف مختصر للخدمة</text>
+  
+  <!-- زر احجز الآن -->
+  <rect x="450" y="390" width="300" height="80" rx="8" fill="#ff9800" stroke="#e65100" stroke-width="2"/>
+  <text x="600" y="425" class="label" text-anchor="middle" font-size="18">زر احجز الآن</text>
+  <text x="600" y="445" class="label" text-anchor="middle" font-size="12">CTA بارز</text>
+  
+  <!-- قسم المميزات -->
+  <rect x="70" y="530" width="1060" height="250" rx="4" fill="#f5f5f5" stroke="#ccc" stroke-width="2"/>
+  <text x="100" y="555" class="title">قسم المميزات</text>
+  <text x="100" y="572" class="section-name">4-6 بطاقات مميزات</text>
+  
+  <!-- بطاقات المميزات -->
+  <rect x="100" y="590" width="230" height="160" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="215" y="640" class="subtitle" text-anchor="middle">ميزة 1</text>
+  <text x="215" y="660" class="section-name" text-anchor="middle">أيقونة + عنوان + وصف</text>
+  
+  <rect x="360" y="590" width="230" height="160" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="475" y="640" class="subtitle" text-anchor="middle">ميزة 2</text>
+  <text x="475" y="660" class="section-name" text-anchor="middle">أيقونة + عنوان + وصف</text>
+  
+  <rect x="620" y="590" width="230" height="160" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="735" y="640" class="subtitle" text-anchor="middle">ميزة 3</text>
+  <text x="735" y="660" class="section-name" text-anchor="middle">أيقونة + عنوان + وصف</text>
+  
+  <rect x="880" y="590" width="230" height="160" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="995" y="640" class="subtitle" text-anchor="middle">ميزة 4</text>
+  <text x="995" y="660" class="section-name" text-anchor="middle">أيقونة + عنوان + وصف</text>
+  
+  <!-- قسم السيارات -->
+  <rect x="70" y="800" width="1060" height="350" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="100" y="825" class="title">قسم السيارات</text>
+  <text x="100" y="842" class="section-name">عرض الفئات</text>
+  
+  <!-- بطاقات السيارات -->
+  <rect x="100" y="860" width="300" height="260" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <rect x="110" y="870" width="280" height="150" rx="4" fill="#e3f2fd"/>
+  <text x="250" y="950" class="subtitle" text-anchor="middle">صورة سيدان</text>
+  <text x="250" y="1050" class="subtitle" text-anchor="middle">بطاقة سيدان</text>
+  <text x="250" y="1070" class="section-name" text-anchor="middle">صورة + وصف + سعر</text>
+  
+  <rect x="430" y="860" width="300" height="260" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <rect x="440" y="870" width="280" height="150" rx="4" fill="#fff3e0"/>
+  <text x="580" y="950" class="subtitle" text-anchor="middle">صورة SUV</text>
+  <text x="580" y="1050" class="subtitle" text-anchor="middle">بطاقة SUV</text>
+  <text x="580" y="1070" class="section-name" text-anchor="middle">صورة + وصف + سعر</text>
+  
+  <rect x="760" y="860" width="300" height="260" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <rect x="770" y="870" width="280" height="150" rx="4" fill="#f3e5f5"/>
+  <text x="910" y="950" class="subtitle" text-anchor="middle">صورة لاكجري</text>
+  <text x="910" y="1050" class="subtitle" text-anchor="middle">بطاقة لاكجري</text>
+  <text x="910" y="1070" class="section-name" text-anchor="middle">صورة + وصف + سعر</text>
+  
+  <!-- قسم الشركاء -->
+  <rect x="70" y="1170" width="1060" height="150" rx="4" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="100" y="1200" class="title">قسم الشركاء</text>
+  <text x="100" y="1217" class="section-name">معلومات B2B</text>
+  <text x="600" y="1250" class="subtitle" text-anchor="middle">خدمات خاصة للشركات والمؤسسات</text>
+  
+  <!-- قسم الشهادات -->
+  <rect x="70" y="1340" width="1060" height="150" rx="4" fill="#f5f5f5" stroke="#ccc" stroke-width="2"/>
+  <text x="100" y="1370" class="title">قسم الشهادات</text>
+  <text x="100" y="1387" class="section-name">آراء العملاء</text>
+  <text x="600" y="1420" class="subtitle" text-anchor="middle">عرض تقييمات وآراء العملاء</text>
+  
+  <!-- التذييل -->
+  <rect x="70" y="1510" width="1060" height="120" rx="4" fill="#263238" stroke="#000" stroke-width="2"/>
+  <text x="100" y="1540" class="label">التذييل</text>
+  <text x="100" y="1557" class="label" font-size="10">روابط + تواصل + حقوق</text>
+</svg>

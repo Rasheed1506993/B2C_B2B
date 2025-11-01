@@ -1,0 +1,265 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #333; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 12px; fill: #666; }
+      .label { font-family: Arial, sans-serif; font-size: 10px; fill: #555; }
+      .header-text { font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; fill: #333; }
+    </style>
+  </defs>
+  
+  <!-- الخلفية -->
+  <rect width="1600" height="900" fill="#f5f5f5"/>
+  
+  <!-- الحاوية الرئيسية -->
+  <rect x="50" y="50" width="1500" height="800" rx="8" fill="#fff" stroke="#ccc" stroke-width="2"/>
+  <text x="800" y="30" class="title" text-anchor="middle">جدول الموردين النشطين</text>
+  
+  <!-- رأس الجدول -->
+  <rect x="70" y="80" width="1460" height="50" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="100" y="110" class="title">إدارة الموردين</text>
+  <text x="100" y="125" class="subtitle">إجمالي الموردين النشطين: 45 مورد</text>
+  <rect x="1330" y="90" width="180" height="35" rx="6" fill="#4caf50" stroke="#2e7d32" stroke-width="2"/>
+  <text x="1420" y="113" style="fill: #fff; font-size: 14px; font-weight: bold;" text-anchor="middle">+ إضافة مورد</text>
+  
+  <!-- ترويسة الجدول -->
+  <rect x="70" y="150" width="1460" height="40" rx="2" fill="#f5f5f5"/>
+  <text x="90" y="175" class="header-text">الاسم</text>
+  <text x="290" y="175" class="header-text">الجوال</text>
+  <text x="460" y="175" class="header-text">السيارات</text>
+  <text x="600" y="175" class="header-text">العمولة</text>
+  <text x="770" y="175" class="header-text">الرحلات</text>
+  <text x="910" y="175" class="header-text">التقييم</text>
+  <text x="1060" y="175" class="header-text">الرصيد</text>
+  <text x="1220" y="175" class="header-text">آخر رحلة</text>
+  <text x="1370" y="175" class="header-text">الحالة</text>
+  <text x="1500" y="175" class="header-text">إجراءات</text>
+  
+  <!-- صف 1 -->
+  <rect x="70" y="200" width="1460" height="70" rx="2" fill="#fff"/>
+  <circle cx="110" cy="235" r="20" fill="#e3f2fd"/>
+  <text x="110" y="240" style="font-size: 16px;" text-anchor="middle">👨</text>
+  <text x="140" y="235" class="label">محمد العتيبي</text>
+  
+  <text x="290" y="230" class="label">0501234567</text>
+  <rect x="290" y="240" width="80" height="20" rx="4" fill="#4caf50"/>
+  <text x="330" y="254" style="fill: #fff; font-size: 9px;" text-anchor="middle">📞 اتصال</text>
+  
+  <text x="460" y="230" class="label" font-weight="bold">3 سيارات</text>
+  <text x="460" y="250" class="label" fill="#2196f3" style="text-decoration: underline;">عرض →</text>
+  
+  <text x="600" y="235" class="label" font-weight="bold">70%</text>
+  <rect x="640" y="225" width="60" height="20" rx="4" fill="#fff8e1" stroke="#ffa000" stroke-width="1"/>
+  <text x="670" y="239" style="font-size: 9px; fill: #f57c00;" text-anchor="middle">تعديل</text>
+  
+  <text x="770" y="235" class="label" font-weight="bold">125</text>
+  
+  <text x="910" y="230" class="label">⭐⭐⭐⭐⭐</text>
+  <text x="910" y="250" class="label" fill="#ff9800" font-weight="bold">4.8</text>
+  
+  <text x="1060" y="235" class="label" font-weight="bold">2,350 ريال</text>
+  
+  <text x="1220" y="235" class="label">2025/11/10</text>
+  
+  <rect x="1370" y="220" width="80" height="30" rx="15" fill="#4caf50"/>
+  <text x="1410" y="240" style="fill: #fff; font-size: 10px; font-weight: bold;" text-anchor="middle">متاح</text>
+  
+  <rect x="1500" y="220" width="25" height="25" rx="4" fill="#2196f3"/>
+  <text x="1512" y="237" style="fill: #fff; font-size: 12px;" text-anchor="middle">👁</text>
+  
+  <!-- صف 2 -->
+  <rect x="70" y="280" width="1460" height="70" rx="2" fill="#fafafa"/>
+  <circle cx="110" cy="315" r="20" fill="#fff3e0"/>
+  <text x="110" y="320" style="font-size: 16px;" text-anchor="middle">👨</text>
+  <text x="140" y="315" class="label">أحمد السالم</text>
+  
+  <text x="290" y="310" class="label">0559876543</text>
+  <rect x="290" y="320" width="80" height="20" rx="4" fill="#4caf50"/>
+  <text x="330" y="334" style="fill: #fff; font-size: 9px;" text-anchor="middle">📞 اتصال</text>
+  
+  <text x="460" y="310" class="label" font-weight="bold">2 سيارات</text>
+  <text x="460" y="330" class="label" fill="#2196f3" style="text-decoration: underline;">عرض →</text>
+  
+  <text x="600" y="315" class="label" font-weight="bold">65%</text>
+  <rect x="640" y="305" width="60" height="20" rx="4" fill="#fff8e1" stroke="#ffa000" stroke-width="1"/>
+  <text x="670" y="319" style="font-size: 9px; fill: #f57c00;" text-anchor="middle">تعديل</text>
+  
+  <text x="770" y="315" class="label" font-weight="bold">89</text>
+  
+  <text x="910" y="310" class="label">⭐⭐⭐⭐⭐</text>
+  <text x="910" y="330" class="label" fill="#ff9800" font-weight="bold">4.9</text>
+  
+  <text x="1060" y="315" class="label" font-weight="bold">1,580 ريال</text>
+  
+  <text x="1220" y="315" class="label">2025/11/12</text>
+  
+  <rect x="1370" y="300" width="80" height="30" rx="15" fill="#4caf50"/>
+  <text x="1410" y="320" style="fill: #fff; font-size: 10px; font-weight: bold;" text-anchor="middle">متاح</text>
+  
+  <rect x="1500" y="300" width="25" height="25" rx="4" fill="#2196f3"/>
+  <text x="1512" y="317" style="fill: #fff; font-size: 12px;" text-anchor="middle">👁</text>
+  
+  <!-- صف 3 -->
+  <rect x="70" y="360" width="1460" height="70" rx="2" fill="#fff"/>
+  <circle cx="110" cy="395" r="20" fill="#f3e5f5"/>
+  <text x="110" y="400" style="font-size: 16px;" text-anchor="middle">👨</text>
+  <text x="140" y="395" class="label">خالد المطيري</text>
+  
+  <text x="290" y="390" class="label">0553332211</text>
+  <rect x="290" y="400" width="80" height="20" rx="4" fill="#4caf50"/>
+  <text x="330" y="414" style="fill: #fff; font-size: 9px;" text-anchor="middle">📞 اتصال</text>
+  
+  <text x="460" y="390" class="label" font-weight="bold">1 سيارة</text>
+  <text x="460" y="410" class="label" fill="#2196f3" style="text-decoration: underline;">عرض →</text>
+  
+  <text x="600" y="395" class="label" font-weight="bold">80%</text>
+  <rect x="640" y="385" width="60" height="20" rx="4" fill="#fff8e1" stroke="#ffa000" stroke-width="1"/>
+  <text x="670" y="399" style="font-size: 9px; fill: #f57c00;" text-anchor="middle">تعديل</text>
+  
+  <text x="770" y="395" class="label" font-weight="bold">45</text>
+  
+  <text x="910" y="390" class="label">⭐⭐⭐⭐⭐</text>
+  <text x="910" y="410" class="label" fill="#ff9800" font-weight="bold">5.0</text>
+  
+  <text x="1060" y="395" class="label" font-weight="bold">890 ریال</text>
+  
+  <text x="1220" y="395" class="label">2025/11/14</text>
+  
+  <rect x="1370" y="380" width="80" height="30" rx="15" fill="#ff9800"/>
+  <text x="1410" y="400" style="fill: #fff; font-size: 10px; font-weight: bold;" text-anchor="middle">محجوز</text>
+  
+  <rect x="1500" y="380" width="25" height="25" rx="4" fill="#2196f3"/>
+  <text x="1512" y="397" style="fill: #fff; font-size: 12px;" text-anchor="middle">👁</text>
+  
+  <!-- صف 4 -->
+  <rect x="70" y="440" width="1460" height="70" rx="2" fill="#fafafa"/>
+  <circle cx="110" cy="475" r="20" fill="#fff8e1"/>
+  <text x="110" y="480" style="font-size: 16px;" text-anchor="middle">👨</text>
+  <text x="140" y="475" class="label">سعد الدوسري</text>
+  
+  <text x="290" y="470" class="label">0544445555</text>
+  <rect x="290" y="480" width="80" height="20" rx="4" fill="#4caf50"/>
+  <text x="330" y="494" style="fill: #fff; font-size: 9px;" text-anchor="middle">📞 اتصال</text>
+  
+  <text x="460" y="470" class="label" font-weight="bold">4 سيارات</text>
+  <text x="460" y="490" class="label" fill="#2196f3" style="text-decoration: underline;">عرض →</text>
+  
+  <text x="600" y="475" class="label" font-weight="bold">68%</text>
+  <rect x="640" y="465" width="60" height="20" rx="4" fill="#fff8e1" stroke="#ffa000" stroke-width="1"/>
+  <text x="670" y="479" style="font-size: 9px; fill: #f57c00;" text-anchor="middle">تعديل</text>
+  
+  <text x="770" y="475" class="label" font-weight="bold">156</text>
+  
+  <text x="910" y="470" class="label">⭐⭐⭐⭐☆</text>
+  <text x="910" y="490" class="label" fill="#ff9800" font-weight="bold">4.7</text>
+  
+  <text x="1060" y="475" class="label" font-weight="bold">3,120 ريال</text>
+  
+  <text x="1220" y="475" class="label">2025/11/08</text>
+  
+  <rect x="1370" y="460" width="80" height="30" rx="15" fill="#9e9e9e"/>
+  <text x="1410" y="480" style="fill: #fff; font-size: 10px; font-weight: bold;" text-anchor="middle">إجازة</text>
+  
+  <rect x="1500" y="460" width="25" height="25" rx="4" fill="#2196f3"/>
+  <text x="1512" y="477" style="fill: #fff; font-size: 12px;" text-anchor="middle">👁</text>
+  
+  <!-- صف 5 -->
+  <rect x="70" y="520" width="1460" height="70" rx="2" fill="#fff"/>
+  <circle cx="110" cy="555" r="20" fill="#e3f2fd"/>
+  <text x="110" y="560" style="font-size: 16px;" text-anchor="middle">👨</text>
+  <text x="140" y="555" class="label">عبدالله القحطاني</text>
+  
+  <text x="290" y="550" class="label">0566667777</text>
+  <rect x="290" y="560" width="80" height="20" rx="4" fill="#4caf50"/>
+  <text x="330" y="574" style="fill: #fff; font-size: 9px;" text-anchor="middle">📞 اتصال</text>
+  
+  <text x="460" y="550" class="label" font-weight="bold">2 سيارات</text>
+  <text x="460" y="570" class="label" fill="#2196f3" style="text-decoration: underline;">عرض →</text>
+  
+  <text x="600" y="555" class="label" font-weight="bold">72%</text>
+  <rect x="640" y="545" width="60" height="20" rx="4" fill="#fff8e1" stroke="#ffa000" stroke-width="1"/>
+  <text x="670" y="559" style="font-size: 9px; fill: #f57c00;" text-anchor="middle">تعديل</text>
+  
+  <text x="770" y="555" class="label" font-weight="bold">78</text>
+  
+  <text x="910" y="550" class="label">⭐⭐⭐⭐☆</text>
+  <text x="910" y="570" class="label" fill="#ff9800" font-weight="bold">4.6</text>
+  
+  <text x="1060" y="555" class="label" font-weight="bold">1,945 ريال</text>
+  
+  <text x="1220" y="555" class="label">2025/11/13</text>
+  
+  <rect x="1370" y="540" width="80" height="30" rx="15" fill="#4caf50"/>
+  <text x="1410" y="560" style="fill: #fff; font-size: 10px; font-weight: bold;" text-anchor="middle">متاح</text>
+  
+  <rect x="1500" y="540" width="25" height="25" rx="4" fill="#2196f3"/>
+  <text x="1512" y="557" style="fill: #fff; font-size: 12px;" text-anchor="middle">👁</text>
+  
+  <!-- صف 6 -->
+  <rect x="70" y="600" width="1460" height="70" rx="2" fill="#fafafa"/>
+  <circle cx="110" cy="635" r="20" fill="#e8f5e9"/>
+  <text x="110" y="640" style="font-size: 16px;" text-anchor="middle">👨</text>
+  <text x="140" y="635" class="label">فيصل الشمري</text>
+  
+  <text x="290" y="630" class="label">0577778888</text>
+  <rect x="290" y="640" width="80" height="20" rx="4" fill="#4caf50"/>
+  <text x="330" y="654" style="fill: #fff; font-size: 9px;" text-anchor="middle">📞 اتصال</text>
+  
+  <text x="460" y="630" class="label" font-weight="bold">3 سيارات</text>
+  <text x="460" y="650" class="label" fill="#2196f3" style="text-decoration: underline;">عرض →</text>
+  
+  <text x="600" y="635" class="label" font-weight="bold">75%</text>
+  <rect x="640" y="625" width="60" height="20" rx="4" fill="#fff8e1" stroke="#ffa000" stroke-width="1"/>
+  <text x="670" y="639" style="font-size: 9px; fill: #f57c00;" text-anchor="middle">تعديل</text>
+  
+  <text x="770" y="635" class="label" font-weight="bold">102</text>
+  
+  <text x="910" y="630" class="label">⭐⭐⭐⭐⭐</text>
+  <text x="910" y="650" class="label" fill="#ff9800" font-weight="bold">4.8</text>
+  
+  <text x="1060" y="635" class="label" font-weight="bold">2,670 ریال</text>
+  
+  <text x="1220" y="635" class="label">2025/11/11</text>
+  
+  <rect x="1370" y="620" width="80" height="30" rx="15" fill="#4caf50"/>
+  <text x="1410" y="640" style="fill: #fff; font-size: 10px; font-weight: bold;" text-anchor="middle">متاح</text>
+  
+  <rect x="1500" y="620" width="25" height="25" rx="4" fill="#2196f3"/>
+  <text x="1512" y="637" style="fill: #fff; font-size: 12px;" text-anchor="middle">👁</text>
+  
+  <!-- صف 7 -->
+  <rect x="70" y="680" width="1460" height="70" rx="2" fill="#fff"/>
+  <circle cx="110" cy="715" r="20" fill="#fff3e0"/>
+  <text x="110" y="720" style="font-size: 16px;" text-anchor="middle">👨</text>
+  <text x="140" y="715" class="label">يوسف الغامدي</text>
+  
+  <text x="290" y="710" class="label">0588889999</text>
+  <rect x="290" y="720" width="80" height="20" rx="4" fill="#4caf50"/>
+  <text x="330" y="734" style="fill: #fff; font-size: 9px;" text-anchor="middle">📞 اتصال</text>
+  
+  <text x="460" y="710" class="label" font-weight="bold">1 سيارة</text>
+  <text x="460" y="730" class="label" fill="#2196f3" style="text-decoration: underline;">عرض →</text>
+  
+  <text x="600" y="715" class="label" font-weight="bold">70%</text>
+  <rect x="640" y="705" width="60" height="20" rx="4" fill="#fff8e1" stroke="#ffa000" stroke-width="1"/>
+  <text x="670" y="719" style="font-size: 9px; fill: #f57c00;" text-anchor="middle">تعديل</text>
+  
+  <text x="770" y="715" class="label" font-weight="bold">34</text>
+  
+  <text x="910" y="710" class="label">⭐⭐⭐⭐☆</text>
+  <text x="910" y="730" class="label" fill="#ff9800" font-weight="bold">4.5</text>
+  
+  <text x="1060" y="715" class="label" font-weight="bold">720 ریال</text>
+  
+  <text x="1220" y="715" class="label">2025/11/15</text>
+  
+  <rect x="1370" y="700" width="80" height="30" rx="15" fill="#4caf50"/>
+  <text x="1410" y="720" style="fill: #fff; font-size: 10px; font-weight: bold;" text-anchor="middle">متاح</text>
+  
+  <rect x="1500" y="700" width="25" height="25" rx="4" fill="#2196f3"/>
+  <text x="1512" y="717" style="fill: #fff; font-size: 12px;" text-anchor="middle">👁</text>
+  
+  <!-- ترقيم الصفحات -->
+  <rect x="650" y="780" width="300" height="40" rx="4" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="800" y="805" class="label" text-anchor="middle">← السابق | 1 2 3 4 5 | التالي →</text>
+</svg>

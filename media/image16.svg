@@ -1,0 +1,127 @@
+<svg viewBox="0 0 1000 1400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #333; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 12px; fill: #666; }
+      .label { font-family: Arial, sans-serif; font-size: 10px; fill: #555; }
+      .amount { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
+    </style>
+  </defs>
+  
+  <!-- الخلفية -->
+  <rect width="1000" height="1400" fill="#f5f5f5"/>
+  
+  <!-- الحاوية الرئيسية -->
+  <rect x="100" y="50" width="800" height="1300" rx="8" fill="#fff" stroke="#ccc" stroke-width="2"/>
+  <text x="500" y="30" class="title" text-anchor="middle">نافذة الإقفال المحاسبي</text>
+  
+  <!-- رأس النافذة -->
+  <rect x="120" y="80" width="760" height="70" rx="4" fill="#1a237e" stroke="#0d47a1" stroke-width="2"/>
+  <text x="500" y="110" style="fill: #fff; font-size: 18px; font-weight: bold;" text-anchor="middle">إقفال الحجز #12345</text>
+  <text x="500" y="135" style="fill: #fff; font-size: 12px;" text-anchor="middle">الحالة: جاهز للإقفال</text>
+  
+  <!-- ملخص الحجز -->
+  <rect x="120" y="170" width="760" height="80" rx="4" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="140" y="195" class="subtitle">ملخص الحجز</text>
+  <text x="140" y="215" class="label">التاريخ: 2025/11/15 | الوقت: 10:00 صباحاً</text>
+  <text x="140" y="235" class="label">الخدمة: توصيل من الرياض إلى المطار (35 كم)</text>
+  
+  <!-- العميل والسائق -->
+  <rect x="120" y="270" width="760" height="80" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="140" y="295" class="subtitle">بيانات الأطراف</text>
+  <text x="140" y="315" class="label">العميل: أحمد المالكي | 0501234567</text>
+  <text x="140" y="335" class="label">السائق: محمد العتيبي | سيدان كامري 2023</text>
+  
+  <!-- تفاصيل الخدمات -->
+  <rect x="120" y="370" width="760" height="120" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="140" y="395" class="subtitle">تفاصيل الخدمات المنفذة</text>
+  <rect x="140" y="410" width="720" height="25" rx="2" fill="#f5f5f5"/>
+  <text x="160" y="427" class="label">الخدمة: توصيل</text>
+  <text x="500" y="427" class="label">المسافة: 35 كم</text>
+  <text x="650" y="427" class="label">المبلغ: 150 ريال</text>
+  <rect x="140" y="445" width="720" height="25" rx="2" fill="#fff"/>
+  <text x="160" y="462" class="label">رسوم إضافية</text>
+  <text x="500" y="462" class="label">-</text>
+  <text x="650" y="462" class="label">20 ريال</text>
+  
+  <!-- قسم التحقق من الدفع -->
+  <rect x="120" y="510" width="760" height="180" rx="4" fill="#fff8e1" stroke="#ffa000" stroke-width="2"/>
+  <text x="140" y="535" class="title">قسم التحقق من الدفع</text>
+  
+  <rect x="140" y="550" width="720" height="40" rx="4" fill="#e8f5e9" stroke="#66bb6a" stroke-width="1"/>
+  <text x="160" y="575" class="subtitle">حالة الدفع: ✓ مؤكد</text>
+  
+  <rect x="140" y="600" width="720" height="40" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="160" y="625" class="label">طريقة الدفع: بطاقة ائتمان</text>
+  
+  <rect x="140" y="650" width="720" height="40" rx="4" fill="#fafafa" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="160" y="675" class="label">إثبات الدفع: [عرض المستند] 📄</text>
+  
+  <!-- قسم الخصومات -->
+  <rect x="120" y="710" width="760" height="150" rx="4" fill="#e8f5e9" stroke="#66bb6a" stroke-width="2"/>
+  <text x="140" y="735" class="title">قسم الخصومات</text>
+  
+  <rect x="140" y="750" width="720" height="30" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="160" y="770" class="label">خصم العميل: 5%</text>
+  <text x="700" y="770" class="label">-8.50 ريال</text>
+  
+  <rect x="140" y="790" width="720" height="30" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="160" y="810" class="label">خصم الشركة: 0%</text>
+  <text x="700" y="810" class="label">0 ريال</text>
+  
+  <rect x="140" y="830" width="720" height="30" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="160" y="850" class="label">خصومات خاصة: 0</text>
+  <text x="700" y="850" class="label">0 ريال</text>
+  
+  <!-- قسم العمولات -->
+  <rect x="120" y="880" width="760" height="130" rx="4" fill="#fff3e0" stroke="#ff6f00" stroke-width="2"/>
+  <text x="140" y="905" class="title">قسم العمولات</text>
+  
+  <rect x="140" y="920" width="720" height="30" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="160" y="940" class="label">نسبة المورد: 70%</text>
+  <text x="700" y="940" class="label">115.15 ريال</text>
+  
+  <rect x="140" y="960" width="345" height="40" rx="4" fill="#e8f5e9" stroke="#66bb6a" stroke-width="1"/>
+  <text x="312" y="985" class="amount" text-anchor="middle" fill="#2e7d32">مستحق المورد</text>
+  <text x="312" y="1000" style="font-size: 10px; fill: #2e7d32;" text-anchor="middle">115.15 ريال</text>
+  
+  <rect x="505" y="960" width="355" height="40" rx="4" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
+  <text x="682" y="985" class="amount" text-anchor="middle" fill="#1b5e20">صافي ربح الشركة</text>
+  <text x="682" y="1000" style="font-size: 10px; fill: #1b5e20;" text-anchor="middle">49.35 ريال</text>
+  
+  <!-- الملخص المالي النهائي -->
+  <rect x="120" y="1030" width="760" height="220" rx="4" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="140" y="1055" class="title">الملخص المالي النهائي</text>
+  
+  <rect x="140" y="1070" width="720" height="25" rx="2" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="160" y="1087" class="label">المبلغ الإجمالي</text>
+  <text x="700" y="1087" class="label">170.00 ريال</text>
+  
+  <rect x="140" y="1105" width="720" height="25" rx="2" fill="#ffcdd2" stroke="#e57373" stroke-width="1"/>
+  <text x="160" y="1122" class="label">إجمالي الخصومات</text>
+  <text x="700" y="1122" class="label">-8.50 ريال</text>
+  
+  <rect x="140" y="1140" width="720" height="25" rx="2" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="160" y="1157" class="label">المبلغ بعد الخصم</text>
+  <text x="700" y="1157" class="label">161.50 ريال</text>
+  
+  <rect x="140" y="1175" width="720" height="25" rx="2" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="160" y="1192" class="label">ضريبة القيمة المضافة (15%)</text>
+  <text x="700" y="1192" class="label">+24.23 ريال</text>
+  
+  <rect x="140" y="1210" width="720" height="35" rx="4" fill="#ffecb3" stroke="#ff6f00" stroke-width="2"/>
+  <text x="160" y="1232" class="amount" fill="#e65100">المبلغ النهائي للتأكيد</text>
+  <text x="700" y="1232" class="amount" fill="#e65100">185.73 ريال</text>
+  
+  <!-- ملاحظات الإقفال -->
+  <rect x="120" y="1270" width="760" height="60" rx="4" fill="#fafafa" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="140" y="1290" class="label">ملاحظات الإقفال (اختياري):</text>
+  <rect x="140" y="1300" width="720" height="25" rx="2" fill="#fff" stroke="#bdbdbd" stroke-width="1"/>
+  
+  <!-- أزرار الإجراء -->
+  <rect x="120" y="1350" width="360" height="50" rx="6" fill="#4caf50" stroke="#2e7d32" stroke-width="2"/>
+  <text x="300" y="1380" style="fill: #fff; font-size: 16px; font-weight: bold;" text-anchor="middle">✓ تأكيد الإقفال</text>
+  
+  <rect x="500" y="1350" width="380" height="50" rx="6" fill="#f44336" stroke="#c62828" stroke-width="2"/>
+  <text x="690" y="1380" style="fill: #fff; font-size: 16px; font-weight: bold;" text-anchor="middle">✗ إلغاء</text>
+</svg>

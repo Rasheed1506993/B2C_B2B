@@ -1,0 +1,219 @@
+<svg viewBox="0 0 1400 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #333; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 12px; fill: #666; }
+      .label { font-family: Arial, sans-serif; font-size: 10px; fill: #555; }
+      .header-text { font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; fill: #333; }
+    </style>
+  </defs>
+  
+  <!-- الخلفية -->
+  <rect width="1400" height="1200" fill="#f5f5f5"/>
+  
+  <!-- الحاوية الرئيسية -->
+  <rect x="50" y="50" width="1300" height="1100" rx="8" fill="#fff" stroke="#ccc" stroke-width="2"/>
+  <text x="700" y="30" class="title" text-anchor="middle">شاشة إدارة السيارات</text>
+  
+  <!-- الرأس -->
+  <rect x="70" y="70" width="1260" height="70" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="90" y="100" class="title">إدارة السيارات</text>
+  <text x="90" y="120" class="subtitle">إجمالي السيارات: 127 سيارة</text>
+  <rect x="1140" y="85" width="170" height="40" rx="6" fill="#4caf50" stroke="#2e7d32" stroke-width="2"/>
+  <text x="1225" y="110" style="fill: #fff; font-size: 14px; font-weight: bold;" text-anchor="middle">+ إضافة سيارة</text>
+  
+  <!-- الفلاتر -->
+  <rect x="70" y="160" width="1260" height="60" rx="4" fill="#fafafa" stroke="#bdbdbd" stroke-width="2"/>
+  <text x="90" y="185" class="subtitle">الفلاتر:</text>
+  <rect x="90" y="195" width="150" height="25" rx="4" fill="#fff" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="165" y="212" class="label" text-anchor="middle">المنطقة ▼</text>
+  <rect x="260" y="195" width="150" height="25" rx="4" fill="#fff" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="335" y="212" class="label" text-anchor="middle">الفئة ▼</text>
+  <rect x="430" y="195" width="150" height="25" rx="4" fill="#fff" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="505" y="212" class="label" text-anchor="middle">المورد ▼</text>
+  <rect x="600" y="195" width="150" height="25" rx="4" fill="#fff" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="675" y="212" class="label" text-anchor="middle">الحالة ▼</text>
+  <rect x="900" y="195" width="400" height="25" rx="4" fill="#fff" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="920" y="212" class="label">🔍 البحث برقم اللوحة أو الماركة...</text>
+  
+  <!-- الجدول -->
+  <rect x="70" y="240" width="1260" height="450" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <!-- ترويسة الجدول -->
+  <rect x="90" y="260" width="1220" height="30" rx="2" fill="#f5f5f5"/>
+  <text x="110" y="280" class="header-text">الصورة</text>
+  <text x="210" y="280" class="header-text">اللوحة</text>
+  <text x="350" y="280" class="header-text">السيارة</text>
+  <text x="550" y="280" class="header-text">الفئة</text>
+  <text x="690" y="280" class="header-text">المورد</text>
+  <text x="870" y="280" class="header-text">الحالة</text>
+  <text x="1000" y="280" class="header-text">الإحصائيات</text>
+  <text x="1170" y="280" class="header-text">الإجراءات</text>
+  
+  <!-- صف 1 -->
+  <rect x="90" y="300" width="1220" height="60" rx="2" fill="#fff"/>
+  <rect x="100" y="310" width="60" height="40" rx="4" fill="#e3f2fd"/>
+  <text x="130" y="335" style="font-size: 20px;" text-anchor="middle">🚗</text>
+  <text x="210" y="335" class="label">أ ب ج 1234</text>
+  <text x="350" y="330" class="label">تويوتا كامري</text>
+  <text x="350" y="345" class="label" fill="#999">2023</text>
+  <rect x="550" y="315" width="80" height="25" rx="4" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
+  <text x="590" y="332" class="label" text-anchor="middle">سيدان</text>
+  <text x="690" y="330" class="label">محمد العتيبي</text>
+  <text x="690" y="345" class="label" fill="#999">0501234567</text>
+  <rect x="870" y="320" width="70" height="20" rx="10" fill="#4caf50"/>
+  <text x="905" y="335" style="fill: #fff; font-size: 9px; font-weight: bold;" text-anchor="middle">متاح</text>
+  <text x="1000" y="330" class="label">125 رحلة</text>
+  <text x="1000" y="345" class="label">⭐ 4.8</text>
+  <rect x="1170" y="315" width="50" height="25" rx="4" fill="#2196f3"/>
+  <text x="1195" y="332" style="fill: #fff; font-size: 9px;" text-anchor="middle">عرض</text>
+  <rect x="1230" y="315" width="50" height="25" rx="4" fill="#ff9800"/>
+  <text x="1255" y="332" style="fill: #fff; font-size: 9px;" text-anchor="middle">تعديل</text>
+  
+  <!-- صف 2 -->
+  <rect x="90" y="370" width="1220" height="60" rx="2" fill="#fafafa"/>
+  <rect x="100" y="380" width="60" height="40" rx="4" fill="#fff3e0"/>
+  <text x="130" y="405" style="font-size: 20px;" text-anchor="middle">🚙</text>
+  <text x="210" y="405" class="label">د هـ و 5678</text>
+  <text x="350" y="400" class="label">هيونداي توسان</text>
+  <text x="350" y="415" class="label" fill="#999">2022</text>
+  <rect x="550" y="385" width="80" height="25" rx="4" fill="#e3f2fd" stroke="#2196f3" stroke-width="1"/>
+  <text x="590" y="402" class="label" text-anchor="middle">SUV</text>
+  <text x="690" y="400" class="label">أحمد السالم</text>
+  <text x="690" y="415" class="label" fill="#999">0559876543</text>
+  <rect x="870" y="390" width="70" height="20" rx="10" fill="#4caf50"/>
+  <text x="905" y="405" style="fill: #fff; font-size: 9px; font-weight: bold;" text-anchor="middle">متاح</text>
+  <text x="1000" y="400" class="label">89 رحلة</text>
+  <text x="1000" y="415" class="label">⭐ 4.9</text>
+  <rect x="1170" y="385" width="50" height="25" rx="4" fill="#2196f3"/>
+  <text x="1195" y="402" style="fill: #fff; font-size: 9px;" text-anchor="middle">عرض</text>
+  <rect x="1230" y="385" width="50" height="25" rx="4" fill="#ff9800"/>
+  <text x="1255" y="402" style="fill: #fff; font-size: 9px;" text-anchor="middle">تعديل</text>
+  
+  <!-- صف 3 -->
+  <rect x="90" y="440" width="1220" height="60" rx="2" fill="#fff"/>
+  <rect x="100" y="450" width="60" height="40" rx="4" fill="#f3e5f5"/>
+  <text x="130" y="475" style="font-size: 20px;" text-anchor="middle">✨</text>
+  <text x="210" y="475" class="label">ز ح ط 9999</text>
+  <text x="350" y="470" class="label">مرسيدس S-Class</text>
+  <text x="350" y="485" class="label" fill="#999">2024</text>
+  <rect x="550" y="455" width="80" height="25" rx="4" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
+  <text x="590" y="472" class="label" text-anchor="middle">لاكجري</text>
+  <text x="690" y="470" class="label">خالد المطيري</text>
+  <text x="690" y="485" class="label" fill="#999">0553332211</text>
+  <rect x="870" y="460" width="70" height="20" rx="10" fill="#ff9800"/>
+  <text x="905" y="475" style="fill: #fff; font-size: 9px; font-weight: bold;" text-anchor="middle">محجوز</text>
+  <text x="1000" y="470" class="label">45 رحلة</text>
+  <text x="1000" y="485" class="label">⭐ 5.0</text>
+  <rect x="1170" y="455" width="50" height="25" rx="4" fill="#2196f3"/>
+  <text x="1195" y="472" style="fill: #fff; font-size: 9px;" text-anchor="middle">عرض</text>
+  <rect x="1230" y="455" width="50" height="25" rx="4" fill="#ff9800"/>
+  <text x="1255" y="472" style="fill: #fff; font-size: 9px;" text-anchor="middle">تعديل</text>
+  
+  <!-- صف 4 -->
+  <rect x="90" y="510" width="1220" height="60" rx="2" fill="#fafafa"/>
+  <rect x="100" y="520" width="60" height="40" rx="4" fill="#fff8e1"/>
+  <text x="130" y="545" style="font-size: 20px;" text-anchor="middle">🚌</text>
+  <text x="210" y="545" class="label">ي ك ل 3456</text>
+  <text x="350" y="540" class="label">كوستر باص</text>
+  <text x="350" y="555" class="label" fill="#999">2021</text>
+  <rect x="550" y="525" width="80" height="25" rx="4" fill="#fff8e1" stroke="#ffa000" stroke-width="1"/>
+  <text x="590" y="542" class="label" text-anchor="middle">باص</text>
+  <text x="690" y="540" class="label">سعد الدوسري</text>
+  <text x="690" y="555" class="label" fill="#999">0544445555</text>
+  <rect x="870" y="530" width="70" height="20" rx="10" fill="#9e9e9e"/>
+  <text x="905" y="545" style="fill: #fff; font-size: 9px; font-weight: bold;" text-anchor="middle">إجازة</text>
+  <text x="1000" y="540" class="label">156 رحلة</text>
+  <text x="1000" y="555" class="label">⭐ 4.7</text>
+  <rect x="1170" y="525" width="50" height="25" rx="4" fill="#2196f3"/>
+  <text x="1195" y="542" style="fill: #fff; font-size: 9px;" text-anchor="middle">عرض</text>
+  <rect x="1230" y="525" width="50" height="25" rx="4" fill="#ff9800"/>
+  <text x="1255" y="542" style="fill: #fff; font-size: 9px;" text-anchor="middle">تعديل</text>
+  
+  <!-- صف 5 -->
+  <rect x="90" y="580" width="1220" height="60" rx="2" fill="#fff"/>
+  <rect x="100" y="590" width="60" height="40" rx="4" fill="#e3f2fd"/>
+  <text x="130" y="615" style="font-size: 20px;" text-anchor="middle">🚗</text>
+  <text x="210" y="615" class="label">م ن س 7890</text>
+  <text x="350" y="610" class="label">نيسان سنترا</text>
+  <text x="350" y="625" class="label" fill="#999">2023</text>
+  <rect x="550" y="595" width="80" height="25" rx="4" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
+  <text x="590" y="612" class="label" text-anchor="middle">سيدان</text>
+  <text x="690" y="610" class="label">عبدالله القحطاني</text>
+  <text x="690" y="625" class="label" fill="#999">0566667777</text>
+  <rect x="870" y="600" width="70" height="20" rx="10" fill="#4caf50"/>
+  <text x="905" y="615" style="fill: #fff; font-size: 9px; font-weight: bold;" text-anchor="middle">متاح</text>
+  <text x="1000" y="610" class="label">78 رحلة</text>
+  <text x="1000" y="625" class="label">⭐ 4.6</text>
+  <rect x="1170" y="595" width="50" height="25" rx="4" fill="#2196f3"/>
+  <text x="1195" y="612" style="fill: #fff; font-size: 9px;" text-anchor="middle">عرض</text>
+  <rect x="1230" y="595" width="50" height="25" rx="4" fill="#ff9800"/>
+  <text x="1255" y="612" style="fill: #fff; font-size: 9px;" text-anchor="middle">تعديل</text>
+  
+  <!-- صف 6 -->
+  <rect x="90" y="650" width="1220" height="60" rx="2" fill="#fafafa"/>
+  <rect x="100" y="660" width="60" height="40" rx="4" fill="#e3f2fd"/>
+  <text x="130" y="685" style="font-size: 20px;" text-anchor="middle">🚙</text>
+  <text x="210" y="685" class="label">ع ف ص 4321</text>
+  <text x="350" y="680" class="label">فورد إكسبلورر</text>
+  <text x="350" y="695" class="label" fill="#999">2022</text>
+  <rect x="550" y="665" width="80" height="25" rx="4" fill="#e3f2fd" stroke="#2196f3" stroke-width="1"/>
+  <text x="590" y="682" class="label" text-anchor="middle">SUV</text>
+  <text x="690" y="680" class="label">فيصل الشمري</text>
+  <text x="690" y="695" class="label" fill="#999">0577778888</text>
+  <rect x="870" y="670" width="70" height="20" rx="10" fill="#4caf50"/>
+  <text x="905" y="685" style="fill: #fff; font-size: 9px; font-weight: bold;" text-anchor="middle">متاح</text>
+  <text x="1000" y="680" class="label">102 رحلة</text>
+  <text x="1000" y="695" class="label">⭐ 4.8</text>
+  <rect x="1170" y="665" width="50" height="25" rx="4" fill="#2196f3"/>
+  <text x="1195" y="682" style="fill: #fff; font-size: 9px;" text-anchor="middle">عرض</text>
+  <rect x="1230" y="665" width="50" height="25" rx="4" fill="#ff9800"/>
+  <text x="1255" y="682" style="fill: #fff; font-size: 9px;" text-anchor="middle">تعديل</text>
+  
+  <!-- ترقيم الصفحات -->
+  <rect x="550" y="720" width="300" height="40" rx="4" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="700" y="745" class="label" text-anchor="middle">← السابق | 1 2 3 4 5 | التالي →</text>
+  
+  <!-- نافذة التفاصيل (Modal) -->
+  <rect x="70" y="780" width="1260" height="350" rx="6" fill="#fff" stroke="#1976d2" stroke-width="3"/>
+  <text x="90" y="810" class="title">نافذة التفاصيل - Modal</text>
+  <text x="90" y="830" class="subtitle">تظهر عند النقر على "عرض"</text>
+  
+  <rect x="90" y="850" width="380" height="260" rx="4" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="110" y="875" class="subtitle">معلومات السيارة الكاملة</text>
+  <text x="110" y="895" class="label">• رقم اللوحة: أ ب ج 1234</text>
+  <text x="110" y="915" class="label">• الماركة والموديل: تويوتا كامري</text>
+  <text x="110" y="935" class="label">• سنة الصنع: 2023</text>
+  <text x="110" y="955" class="label">• الفئة: سيدان</text>
+  <text x="110" y="975" class="label">• اللون: أبيض</text>
+  <text x="110" y="995" class="label">• المنطقة: الرياض</text>
+  <text x="110" y="1015" class="label">• تاريخ انتهاء الاستمارة: 2025/12/31</text>
+  <text x="110" y="1035" class="label">• تاريخ انتهاء التأمين: 2025/09/15</text>
+  
+  <rect x="490" y="850" width="380" height="260" rx="4" fill="#fff8e1" stroke="#ffa000" stroke-width="2"/>
+  <text x="510" y="875" class="subtitle">معلومات المورد</text>
+  <text x="510" y="895" class="label">• الاسم: محمد العتيبي</text>
+  <text x="510" y="915" class="label">• الجوال: 0501234567</text>
+  <text x="510" y="935" class="label">• البريد: m.alotaibi@email.com</text>
+  <text x="510" y="955" class="label">• نسبة العمولة: 70%</text>
+  <text x="510" y="975" class="label">• إجمالي الرحلات: 125</text>
+  <text x="510" y="995" class="label">• التقييم: ⭐⭐⭐⭐⭐ (4.8)</text>
+  <text x="510" y="1015" class="label">• الرصيد الحالي: 2,350 ريال</text>
+  
+  <rect x="890" y="850" width="440" height="140" rx="4" fill="#e8f5e9" stroke="#66bb6a" stroke-width="2"/>
+  <text x="910" y="875" class="subtitle">الصور والمستندات</text>
+  <rect x="910" y="885" width="100" height="80" rx="4" fill="#c8e6c9"/>
+  <text x="960" y="930" class="label" text-anchor="middle">صورة 1</text>
+  <rect x="1020" y="885" width="100" height="80" rx="4" fill="#c8e6c9"/>
+  <text x="1070" y="930" class="label" text-anchor="middle">صورة 2</text>
+  <rect x="1130" y="885" width="100" height="80" rx="4" fill="#c8e6c9"/>
+  <text x="1180" y="930" class="label" text-anchor="middle">صورة 3</text>
+  <rect x="1240" y="885" width="70" height="80" rx="4" fill="#c8e6c9"/>
+  <text x="1275" y="930" class="label" text-anchor="middle">+5</text>
+  
+  <rect x="890" y="1010" width="200" height="50" rx="6" fill="#2196f3" stroke="#1565c0" stroke-width="2"/>
+  <text x="990" y="1040" style="fill: #fff; font-size: 14px; font-weight: bold;" text-anchor="middle">تعديل البيانات</text>
+  
+  <rect x="1110" y="1010" width="220" height="50" rx="6" fill="#f44336" stroke="#c62828" stroke-width="2"/>
+  <text x="1220" y="1040" style="fill: #fff; font-size: 14px; font-weight: bold;" text-anchor="middle">✗ إيقاف السيارة</text>
+</svg>
